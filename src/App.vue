@@ -11,6 +11,34 @@ export default {
   components: {
     Header,
   },
+  data() {
+    return {
+      tasks: [],
+    };
+  },
+  //LifeCycle method  (created())
+  created() {
+    this.tasks = [
+      {
+        id: 1,
+        text: "Doctors Appointment",
+        day: "May 1st at 2:30",
+        reminder: true,
+      },
+      {
+        id: 2,
+        text: "Meeting with Team",
+        day: "May 15th at 9:00",
+        reminder: true,
+      },
+      {
+        id: 3,
+        text: "Take Dog to Vet",
+        day: "June 1st at 10:30",
+        reminder: false,
+      },
+    ];
+  },
 };
 </script>
 
