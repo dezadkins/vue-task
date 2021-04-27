@@ -21,9 +21,11 @@ export default {
   },
   methods: {
     deleteTask(id) {
-      console.log('task', id)
-    }
-  }
+      if (confirm("Are you sure?")) {
+        this.tasks = this.tasks.filter((task) => task.id !== id);
+      }
+    },
+  },
   //LifeCycle method  (created())
   created() {
     this.tasks = [
